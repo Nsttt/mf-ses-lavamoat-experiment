@@ -1,0 +1,21 @@
+{
+  "name": "mf-ses-lavamoat-experiment",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Load Module Federation remotes into SES compartments endowed with lavamoat-core's endowmentsToolkit, and measure what keeps old versions alive.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": "^22.12.0 || ^24.0.0 || ^26.0.0"
+  },
+  "scripts": {
+    "start": "node src/run.mjs",
+    "quick": "node src/run.mjs --versions 30",
+    "scenario": "node --expose-gc --no-warnings src/scenario.mjs"
+  },
+  "dependencies": {
+    "@module-federation/runtime": "2.9.2",
+    "lavamoat-core": "19.0.0",
+    "ses": "2.3.0"
+  }
+}
