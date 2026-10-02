@@ -11,11 +11,20 @@
   "scripts": {
     "start": "node src/run.mjs",
     "quick": "node src/run.mjs --versions 30",
-    "scenario": "node --expose-gc --no-warnings src/scenario.mjs"
+    "scenario": "node --expose-gc --no-warnings src/scenario.mjs",
+    "build:real": "node real-build/build.mjs",
+    "real": "node real-build/run.mjs",
+    "real:quick": "node real-build/run.mjs --quick"
   },
   "dependencies": {
+    "@module-federation/enhanced": "2.9.2",
+    "@module-federation/node": "2.7.52",
     "@module-federation/runtime": "2.9.2",
+    "big.js": "7.0.1",
     "lavamoat-core": "19.0.0",
     "ses": "2.3.0"
+  },
+  "devDependencies": {
+    "@rspack/core": "2.2.8"
   }
 }
